@@ -2,13 +2,13 @@ Manual Installation
 Official Documentation
 Recommended Hardware: Intel CPU which supports SGX via SPS, 32GB RAM, 500 GB SSD
 
-# install dependencies, if needed
+**install dependencies, if needed**
+```
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
-Node Name
-Wallet
-Port
-44
+```
+
+
 # install go, if needed
 cd $HOME
 VER="1.21.3"
