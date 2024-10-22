@@ -32,7 +32,8 @@ echo "export SWISS_PORT="44"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-# download binary
+**download binary**
+```
 cd $HOME
 rm swisstronikd.zip
 wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.6/swisstronikd.zip
@@ -41,6 +42,7 @@ unzip swisstronikd.zip
 sudo cp ~/bin/libsgx_wrapper_v1.0.6.x86_64.so /usr/lib
 cp bin/v1.0.6_enclave.signed.so $HOME/.swisstronik-enclave
 sudo mv $HOME/bin/swisstronikd $HOME/go/bin
+```
 
 # config and init app
 swisstronikd config node tcp://localhost:${SWISS_PORT}657
