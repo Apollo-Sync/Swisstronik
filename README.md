@@ -52,9 +52,11 @@ swisstronikd config chain-id swisstronik_1291-1
 swisstronikd init "test" --chain-id swisstronik_1291-1
 ```
 
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.swisstronik/config/genesis.json https://server-2.itrocket.net/testnet/swisstronik/genesis.json
 wget -O $HOME/.swisstronik/config/addrbook.json  https://server-2.itrocket.net/testnet/swisstronik/addrbook.json
+```
 
 # set seeds and peers
 SEEDS="ec00cbf5c72ad261e28fd8de61d09cc2936456ed@swisstronik-testnet-seed.itrocket.net:44656"
