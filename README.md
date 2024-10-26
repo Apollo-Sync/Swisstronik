@@ -58,11 +58,13 @@ wget -O $HOME/.swisstronik/config/genesis.json https://server-2.itrocket.net/tes
 wget -O $HOME/.swisstronik/config/addrbook.json  https://server-2.itrocket.net/testnet/swisstronik/addrbook.json
 ```
 
-# set seeds and peers
+**set seeds and peers**
+```
 SEEDS="ec00cbf5c72ad261e28fd8de61d09cc2936456ed@swisstronik-testnet-seed.itrocket.net:44656"
 PEERS="f05c4343d2df801ba05a5ec7bd9954d8728fdb36@swisstronik-testnet-peer.itrocket.net:26656,6a3be625de39e3db02e6cda719d8c564dfde8086@148.113.16.99:26656,575d7c50fc6ec6a8b233659551499a6ece864bd0@57.128.193.157:26656,3cb2105b9ae008f0711ca5d2e285485b6c3ad1ec@148.113.8.228:26656,1f35bf4128576d94c99297a2e33b06b7ee0ae3d2@146.59.111.161:26656,b368e2232e4cdec602c96b77505401f94a643847@148.113.1.150:17156,d5e1bb92c3c264124f7accbd3f7e6a472401f256@148.113.17.9:26656,4e5574f195f4dc6d0252a37867b951226561647d@57.129.28.2:26656,a9a1aedec8b3a8da921afaa7a7ca6e828207f963@57.128.193.118:23756,1d6ed28a0cd141d402c4e9f69137c6e0541ef1b8@148.113.16.43:26656,faf98ecdbaba68f0c8483618ca9f2842b374031c@146.59.110.154:26656,f1ce897ca531618465ff03caf8de4bc406fd01dc@212.8.240.56:26656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.swisstronik/config/config.toml
+```
 
 
 # set custom ports in app.toml
