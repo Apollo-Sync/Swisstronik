@@ -67,7 +67,8 @@ sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
 ```
 
 
-# set custom ports in app.toml
+**set custom ports in app.toml**
+```
 sed -i.bak -e "s%:1317%:${SWISS_PORT}317%g;
 s%:8080%:${SWISS_PORT}080%g;
 s%:9090%:${SWISS_PORT}090%g;
@@ -75,6 +76,7 @@ s%:9091%:${SWISS_PORT}091%g;
 s%:8545%:${SWISS_PORT}545%g;
 s%:8546%:${SWISS_PORT}546%g;
 s%:6065%:${SWISS_PORT}065%g" $HOME/.swisstronik/config/app.toml
+```
 
 # set custom ports in config.toml file
 sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g;
