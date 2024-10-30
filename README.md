@@ -102,7 +102,8 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.swisstronik/config/co
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.swisstronik/config/config.toml
 ```
 
-# create service file
+**create service file**
+```
 sudo tee /etc/systemd/system/swisstronikd.service > /dev/null <<EOF
 [Unit]
 Description=Swisstronik node
@@ -117,6 +118,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 # reset and download snapshot
 swisstronikd tendermint unsafe-reset-all --home $HOME/.swisstronik
