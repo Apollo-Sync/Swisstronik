@@ -95,10 +95,12 @@ sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"100\"/" $HOME/.sw
 sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"50\"/" $HOME/.swisstronik/config/app.toml
 ```
 
-# set minimum gas price, enable prometheus and disable indexing
+**set minimum gas price, enable prometheus and disable indexing**
+```
 sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "7uswtr"|g' $HOME/.swisstronik/config/app.toml
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.swisstronik/config/config.toml
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.swisstronik/config/config.toml
+```
 
 # create service file
 sudo tee /etc/systemd/system/swisstronikd.service > /dev/null <<EOF
