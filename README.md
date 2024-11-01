@@ -120,13 +120,15 @@ WantedBy=multi-user.target
 EOF
 ```
 
-# reset and download snapshot
+**reset and download snapshot**
+```
 swisstronikd tendermint unsafe-reset-all --home $HOME/.swisstronik
 if curl -s --head curl https://server-2.itrocket.net/testnet/swisstronik/swisstronik_2024-10-17_7993421_snap.tar.lz4 | head -n 1 | grep "200" > /dev/null; then
   curl https://server-2.itrocket.net/testnet/swisstronik/swisstronik_2024-10-17_7993421_snap.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.swisstronik
     else
   echo "no snapshot founded"
 fi
+```
 
 # enable and start service
 sudo systemctl daemon-reload
