@@ -130,7 +130,8 @@ if curl -s --head curl https://server-2.itrocket.net/testnet/swisstronik/swisstr
 fi
 ```
 
-# enable and start service
+**enable and start service**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable swisstronikd
 sudo systemctl restart swisstronikd && sudo journalctl -u swisstronikd -f
@@ -138,7 +139,10 @@ Automatic Installation
 pruning: custom: 100/0/19 | indexer: null
 
 source <(curl -s https://itrocket.net/api/testnet/swisstronik/autoinstall/)
+```
+
 Create wallet
+
 # to create a new wallet, use the following command. don’t forget to save the mnemonic
 swisstronikd keys add $WALLET
 
