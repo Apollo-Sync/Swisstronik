@@ -148,8 +148,10 @@ Create wallet
 swisstronikd keys add $WALLET
 ```
 
-# to restore exexuting wallet, use the following command
+**to restore exexuting wallet, use the following command**
+```
 swisstronikd keys add $WALLET --recover
+```
 
 # save wallet and validator address
 WALLET_ADDRESS=$(swisstronikd keys show $WALLET -a)
