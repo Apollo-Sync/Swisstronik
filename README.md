@@ -231,7 +231,7 @@ To protect you keys please don`t share your privkey, mnemonic and follow basic s
 Set up ssh keys for authentication
 You can use this guide to configure ssh authentication and disable password authentication on your server
 
-Firewall security
+**Firewall security**
 Set the default to allow outgoing connections, deny all incoming, allow ssh and node p2p port
 
 sudo ufw default allow outgoing 
@@ -239,10 +239,13 @@ sudo ufw default deny incoming
 sudo ufw allow ssh/tcp 
 sudo ufw allow ${SWISS_PORT}656/tcp
 sudo ufw enable
-Delete node
+
+**Delete node**
+```
 sudo systemctl stop swisstronikd
 sudo systemctl disable swisstronikd
 sudo rm -rf /etc/systemd/system/swisstronikd.service
 sudo rm $(which swisstronikd)
 sudo rm -rf $HOME/.swisstronik
 sed -i "/SWISS_/d" $HOME/.bash_profile
+```
