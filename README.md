@@ -1,7 +1,9 @@
-Manual Installation
+**Manual Installation**
 Official Documentation
-Recommended Hardware: Intel CPU which supports SGX via SPS, 32GB RAM, 500 GB SSD
-
+Recommended Hardware:
+```
+Intel CPU which supports SGX via SPS, 32GB RAM, 500 GB SSD
+```
 **install dependencies, if needed**
 ```
 sudo apt update && sudo apt upgrade -y
