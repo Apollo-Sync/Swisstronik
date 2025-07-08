@@ -245,3 +245,4 @@ sudo rm -rf $HOME/.swisstronik
 sed -i "/SWISS_/d" $HOME/.bash_profile
 ```
 Commit 2 line
+Commit 3 line
